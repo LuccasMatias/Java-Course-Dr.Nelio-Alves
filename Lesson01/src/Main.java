@@ -4,12 +4,29 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        char x;
-        Scanner sc = new Scanner(System.in);
-        Locale.setDefault(Locale.US);
+        double x = 3.0;
+        double y = 4.0;
+        double z = -5.0;
+        double a, b, c;
 
-        x = sc.next().charAt(0); //pega o primeiro char da string digitada
-        System.out.println("Digitado: " + x);
-        sc.close();
+        a = Math.sqrt(x);
+        b = Math.sqrt(y);
+        c = Math.sqrt(25.0);
+        System.out.println("A raiz quadrada de " + x + " = " + a);
+        System.out.println("A raiz quadrada de " + y + " = " + b);
+        System.out.println("A raiz quadrada de 25 = " + c);
+
+        a = Math.pow(x,y);
+        b = Math.pow(x,2.0);
+        c = Math.pow(5.0,2.0);
+        System.out.println(x + " Elevado a " + y + " = " + a);
+        System.out.println(x + " Elevado ao Quadrado = " + b);
+        System.out.println("5 Elevado ao quadrado = " + c);
+
+        a = Math.abs(y);
+        b = Math.abs(z);
+
+        System.out.println("Valor absoluto de Y =" + a);
+        System.out.println("Valor absoluto de Z =" + b);
     }
 }
