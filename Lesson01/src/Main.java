@@ -2,18 +2,19 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        int A, B;
+        int start, end, endGame;
         Scanner scan = new Scanner(System.in);
 
-        System.out.printf("Enter a number: ");
-        A = scan.nextInt();
-        B = scan.nextInt();
+        System.out.printf("Enter the start time: ");
+        start = scan.nextInt();
+        System.out.printf("Enter the end time: ");
+        end = scan.nextInt();
         scan.close();
 
-        if (A < B){
-            System.out.println("Are multiples");
-        }   else{
-            System.out.println("Are not multiples" );
-        }
+        if (start > 12) {start -= 12;}
+        if (end > 12) {end -= 12;}
+
+        endGame = 24 - (start + end);
+        System.out.println("The game lasted " + endGame + " Hours");
     }
 }
