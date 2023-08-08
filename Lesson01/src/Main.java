@@ -2,17 +2,18 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        int input;
+        int A, B;
         Scanner scan = new Scanner(System.in);
 
         System.out.printf("Enter a number: ");
-        input = scan.nextInt();
+        A = scan.nextInt();
+        B = scan.nextInt();
         scan.close();
 
-        if (input % 2 == 0){
-            System.out.println("The number "+ input + " is even: ");
+        if (A < B){
+            System.out.println("Are multiples");
         }   else{
-            System.out.println("The number " + input + " is odd" );
+            System.out.println("Are not multiples" );
         }
     }
 }
