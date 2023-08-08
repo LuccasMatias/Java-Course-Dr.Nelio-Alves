@@ -2,15 +2,11 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        double circunference, pi = 3.14159;
         Scanner sc = new Scanner(System.in);
-        int result;
-
-        int first_value = sc.nextInt();
-        int second_value = sc.nextInt();
-
-        result = first_value + second_value;
-        System.out.println("The sum of the values are: " + result);
+        double radius = sc.nextDouble();
+        circunference = pi * Math.pow(radius,2);
+        System.out.printf("The circunference is %.4f : ", circunference);
         sc.close();
-
     }
 }
