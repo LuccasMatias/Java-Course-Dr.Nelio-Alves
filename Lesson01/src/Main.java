@@ -9,10 +9,10 @@ public class Main {
         input = scan.nextInt();
         scan.close();
 
-        if (input >= 0 ){
-            System.out.println("The number "+ input + " is positive: ");
+        if (input % 2 == 0){
+            System.out.println("The number "+ input + " is even: ");
         }   else{
-            System.out.println("The number " + input + " in negative" );
+            System.out.println("The number " + input + " is odd" );
         }
     }
 }
