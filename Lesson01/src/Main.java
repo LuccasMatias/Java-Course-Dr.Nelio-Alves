@@ -2,19 +2,18 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        int start, end, endGame;
+        int password;
         Scanner scan = new Scanner(System.in);
 
-        System.out.printf("Enter the start time: ");
-        start = scan.nextInt();
-        System.out.printf("Enter the end time: ");
-        end = scan.nextInt();
+        System.out.println("Enter the password: ");
+
+        password = scan.nextInt();
+
+        do {
+            System.out.println("Incorrect password \n");
+            password = scan.nextInt();
+        } while (password != 2002);
+        System.out.println("Correct password");
         scan.close();
-
-        if (start > 12) {start -= 12;}
-        if (end > 12) {end -= 12;}
-
-        endGame = 24 - (start + end);
-        System.out.println("The game lasted " + endGame + " Hours");
     }
 }
