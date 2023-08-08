@@ -2,32 +2,37 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        int axisX, axisY, cont = 0;
+        int gasoline = 0, alcohol = 0, diesel = 0, code = 0;
         Scanner scan = new Scanner(System.in);
 
-        do {
-            System.out.println("Enter the X axis: ");
-            axisX = scan.nextInt();
-            System.out.println("\nEnter the y axis: ");
-            axisY = scan.nextInt();
-
-            if (cont == 0 && (axisX != 0 && axisY != 0)){
-                System.out.println("First: [" + axisX + "][" + axisY + "]");
-                cont++;
+        System.out.println("Enter the fuel type: \n");
+        System.out.println("1- Gasoline\n");
+        System.out.println("2- Alcohol\n");
+        System.out.println("3- Diesel\n");
+        while (code != 4) {
+            code = scan.nextInt();
+            switch (code){
+                case 1:
+                    System.out.println("Gasoline: " + gasoline);
+                    System.out.println("Alcohol: " + alcohol);
+                    System.out.println("Diesel: " + diesel);
+                    alcohol++;
+                    break;
+                case 2:
+                    System.out.println("Gasoline: " + gasoline);
+                    System.out.println("Alcohol: " + alcohol);
+                    System.out.println("Diesel: " + diesel);
+                    alcohol++;
+                    break;
+                case 3:
+                    System.out.println("Gasoline: " + gasoline);
+                    System.out.println("Alcohol: " + alcohol);
+                    System.out.println("Diesel: " + diesel);
+                    diesel++;
+                    break;
             }
-            else if (cont == 1 && (axisX != 0 && axisY != 0)){
-                System.out.println("Second: [" + axisX + "][" + axisY + "]");
-                cont++;
-            }
-            else if (cont == 2 && (axisX != 0 && axisY != 0)){
-                System.out.println("Third: [" + axisX + "][" + axisY + "]");
-                cont++;
-            }
-            else if (cont == 3 && (axisX != 0 && axisY != 0)){
-                System.out.println("Fourth: [" + axisX + "][" + axisY + "]");
-                cont++;
-            }
-        } while ((axisX != 0 && axisY != 0) || cont == 4);
-
+        }
+        System.out.println("Thank You");
+        scan.close();
     }
 }
