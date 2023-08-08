@@ -2,11 +2,18 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        double circunference, pi = 3.14159;
-        Scanner sc = new Scanner(System.in);
-        double radius = sc.nextDouble();
-        circunference = pi * Math.pow(radius,2);
-        System.out.printf("The circunference is %.4f : ", circunference);
-        sc.close();
+        int difference;
+
+        Scanner scan = new Scanner(System.in);
+
+        int a = scan.nextInt();
+        int b = scan.nextInt();
+        int c = scan.nextInt();
+        int d = scan.nextInt();
+
+        difference = a*b - c*d;
+
+        System.out.println("The difference between AB and CD is: " + difference);
+        scan.close();
+
     }
-}
